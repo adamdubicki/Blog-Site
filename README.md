@@ -1,1 +1,2 @@
-# Blog-Site
+## Running in development
+`gatsby develop`
