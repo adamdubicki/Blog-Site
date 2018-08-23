@@ -12,11 +12,46 @@ html, body, #app {
 .main-content {
   //flex: 1;
 }
+
+.container {
+  &__main {
+    justify-content: center
+  }
+}
+
 .footer {
   margin-top: -12px;
 }
-@media screen and (max-width: 768px) {
-  #menu-toggle:checked + .nav-menu {
-    display: block;
+
+.section {
+  &__menu {
+    background-image: linear-gradient(135deg, rgb(240, 0, 121), rgb(242, 160, 65) 75%);
+    box-shadow: 5px 0 30px -5px #333;
+  }
+}
+
+.menu {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  height: 100%;
+  overflow-x: hidden;
+  h1 {
+    font-size: 1.5rem;
+    color: white;
+    padding-left: 0.5rem;
+  }
+}
+
+.is-hidden-web {
+  display: none !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .is-hidden-mobile {
+    display: none !important;
+  }
+  .is-hidden-web {
+    display: block !important;
   }
 }
