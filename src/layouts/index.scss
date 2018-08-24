@@ -26,7 +26,7 @@ html, body, #app {
 .section {
   &__menu {
     background-image: linear-gradient(135deg, rgb(240, 0, 121), rgb(242, 160, 65) 75%);
-    box-shadow: 5px 0 30px -5px #333;
+    box-shadow: 5px 0 20px -5px #333;
   }
 }
 
@@ -36,10 +36,27 @@ html, body, #app {
   top: 0;
   height: 100%;
   overflow-x: hidden;
-  h1 {
+  h1, h2 {
     font-size: 1.5rem;
     color: white;
     padding-left: 0.5rem;
+    text-shadow: none;
+    text-align: center;
+    color: white;
+  }
+  img {
+    border-radius: 50%;
+  }
+  &__icon-container {
+    text-align: center;
+  }
+  &__icon {
+    margin: 10px 10px;
+    color: white;
+  }
+  &__icon:hover {
+    color: black;
+    cursor: pointer;
   }
 }
 
