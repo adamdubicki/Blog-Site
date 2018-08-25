@@ -9,9 +9,6 @@ html, body, #app {
   //display: flex;
   //flex-direction: column;
 }
-.main-content {
-  //flex: 1;
-}
 
 .container {
   &__main {
@@ -23,10 +20,26 @@ html, body, #app {
   margin-top: -12px;
 }
 
-.section {
-  &__menu {
-    background-image: linear-gradient(135deg, rgb(240, 0, 121), rgb(242, 160, 65) 75%);
-    box-shadow: 5px 0 20px -5px #333;
+.section__menu, .navbar {
+  background-image: linear-gradient(135deg, rgb(240, 0, 121), rgb(242, 160, 65) 75%);
+  box-shadow: 5px 0 20px -5px #333;
+}
+
+.navbar {
+  padding-top: 15px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  .title {
+    padding-right: 1.0rem;
+    font-size: 1.5rem;
+    margin-top: 14px;
+    margin-left: 10px;
+  }
+  img {
+    height: 3rem;
+    width: 3rem;
+    margin-left: 1rem;
   }
 }
 
@@ -36,13 +49,32 @@ html, body, #app {
   top: 0;
   height: 100%;
   overflow-x: hidden;
+  h1, h2 { 
+    font-size: 2.0vw;
+  }
+}
+
+.menu,.navbar {
   h1, h2 {
-    font-size: 1.5rem;
     color: white;
     padding-left: 0.5rem;
     text-shadow: none;
     text-align: center;
     color: white;
+    white-space: pre-wrap;
+  }
+  li {
+    &:hover {
+      color: black;
+    }
+  }
+  h2 {
+    &:hover {
+      color: black;
+    }
+  }
+  a {
+    background-image: none;
   }
   img {
     border-radius: 50%;
@@ -50,13 +82,13 @@ html, body, #app {
   &__icon-container {
     text-align: center;
   }
-  &__icon {
+  .icon {
     margin: 10px 10px;
     color: white;
-  }
-  &__icon:hover {
-    color: black;
-    cursor: pointer;
+    &:hover {
+      color: black;
+      cursor: pointer;
+    }
   }
 }
 
@@ -64,11 +96,14 @@ html, body, #app {
   display: none !important;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 769px) {
   .is-hidden-mobile {
     display: none !important;
   }
   .is-hidden-web {
     display: block !important;
+  }
+  .main-content {
+    margin-top: 40px;
   }
 }

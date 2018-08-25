@@ -1,8 +1,9 @@
-import React from "react"
+import React from 'react';
 
-export default () => (
+export default () =>
   <div>
-    <h1>Hi! I am building a fake Gatsby site as part of a tutorial</h1>
-    <p>Foo Bar baz</p>
+    <h1>About Me goes here...</h1>
+    <h2>About Me goes here...</h2>
+    <h3>About Me goes here...</h3>
+    <h4>About Me goes here...</h4>
   </div>
-);

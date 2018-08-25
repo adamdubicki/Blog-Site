@@ -6,8 +6,7 @@ import Navbar from "../components/navbar/Navbar";
 import Menu from "../components/menu/Menu";
 
 
-export default ({data}) => (
-
+export default ({data, children}) => (
   <div id="app">
     <Helmet>
       <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
@@ -17,52 +16,9 @@ export default ({data}) => (
       <Menu title={data.site.siteMetadata.title}/ >
         <div className="container__main column is-10 is-offset-2">
             <div className="section">
-
-              <div className="card">
-                <div className="card-header"><p className="card-header-title">Header</p></div>
-                <div className="card-content"><div className="content">Content</div></div>
-              </div>
-              
-                <div className="card">
-                  <div className="card-header"><p className="card-header-title">Header</p></div>
-                  <div className="card-content"><div className="content">Content</div></div>
-                </div>
-
-                <div className="card">
-                  <div className="card-header"><p className="card-header-title">Header</p></div>
-                  <div className="card-content"><div className="content">Content</div></div>
-                </div>
-
-                <div className="card">
-                  <div className="card-header"><p className="card-header-title">Header</p></div>
-                  <div className="card-content"><div className="content">Content</div></div>
-                </div>
-
-                          <div className="card">
-                  <div className="card-header"><p className="card-header-title">Header</p></div>
-                  <div className="card-content"><div className="content">Content</div></div>
-                </div>
-
-                <div className="card">
-                  <div className="card-header"><p className="card-header-title">Header</p></div>
-                  <div className="card-content"><div className="content">Content</div></div>
-                </div>
-
-                <div className="card">
-                  <div className="card-header"><p className="card-header-title">Header</p></div>
-                  <div className="card-content"><div className="content">Content</div></div>
-                </div>
-
-
-                <div className="card">
-                  <div className="card-header"><p className="card-header-title">Header</p></div>
-                  <div className="card-content"><div className="content">Content</div></div>
-                </div>
-
-              <br />
-              </div>
-              </div>
-    
+              {children()}
+            </div>
+          </div>
     </section>
   </div>
 );

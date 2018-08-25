@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import icon from '../../../assets/adam-icon.jpg';
-import MenuIcon from './MenuIcon';
+import Icon from '../Icon';
+import Link from "gatsby-link"
 
 export default class Menu extends Component {
   render() {
@@ -11,14 +12,35 @@ export default class Menu extends Component {
         <hr/>
         <img src={icon} alt="Adam Dubicki"/>
         <div className="menu__icon-container">
-          <MenuIcon faIcon="fa-github"/>
-          <MenuIcon faIcon="fa-linkedin"/>
-          <MenuIcon faIcon="fa-at"/>
+          <Icon 
+            faIcon="fa-github" 
+            onClick={() => window.open('https://github.com/adamdubicki', '_blank')}
+          />
+          <Icon 
+            faIcon="fa-linkedin"
+            onClick={() => window.open('https://www.linkedin.com/in/adam-dubicki/', '_blank')}
+          />
         </div>
         <hr/>
         <ul className="menu-list">
-          <li><a><h2 className="title">About Me</h2></a></li>
-          <li><a><h2 className="title">Blog Posts</h2></a></li>
+           <Link
+              to="/blog/"
+              activeStyle={{
+                color: 'red'
+              }}
+              innerRef={(el) => { this.myLink = el }}
+            >
+            Blog
+          </Link>
+          <Link
+              to="/foo/"
+              activeStyle={{
+                color: 'red'
+              }}
+              innerRef={(el) => { this.myLink = el }}
+            >
+            About Me
+          </Link>
         </ul>
       </aside>
     );
