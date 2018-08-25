@@ -54,6 +54,11 @@ html, body, #app {
   }
 }
 
+.active {
+  color: black !important;
+  background: white;
+}
+
 .menu,.navbar {
   h1, h2 {
     color: white;
@@ -74,6 +79,11 @@ html, body, #app {
     }
   }
   a {
+    margin: 10px 0px 0px 10px;
+    color: white;
+    text-align: center;
+    text-shadow: none;
+    font-size: 1.5rem;
     background-image: none;
   }
   img {

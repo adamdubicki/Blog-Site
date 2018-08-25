@@ -23,23 +23,20 @@ export default class Menu extends Component {
         </div>
         <hr/>
         <ul className="menu-list">
-           <Link
-              to="/blog/"
-              activeStyle={{
-                color: 'red'
-              }}
-              innerRef={(el) => { this.myLink = el }}
-            >
-            Blog
+          <Link
+            to="/"
+  
+            exact={true}
+            innerRef={(el) => { this.myLink = el }}
+          >
+            About Me
           </Link>
           <Link
-              to="/foo/"
-              activeStyle={{
-                color: 'red'
-              }}
-              innerRef={(el) => { this.myLink = el }}
-            >
-            About Me
+            to="/blog/"
+            exact={true}
+            innerRef={(el) => { this.myLink = el }}
+          >
+            Blog
           </Link>
         </ul>
       </aside>
