@@ -1,16 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Icon extends Component {
-
-  render() {
-    return (
-      <i 
-        className={"icon fa fa-2x " + this.props.faIcon}
-        onClick={() => this.props.onClick()}  
-      >
-      </i>
-    );
-  }
-}
-
-export default Icon;
+export default ({ icon, onClick }) => 
+  <i
+    className={`icon ${icon}`}
+    onClick={() => onClick()}  
+  />
