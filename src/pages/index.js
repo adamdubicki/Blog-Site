@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import HomeHeroContainer from '../components/HomeHeroContainer';
+import Footer from '../components/Footer';
 
 export default () =>
-  <HomeHeroContainer />
+  <div>
+    <HomeHeroContainer />
+    <Footer />
+  </div>
