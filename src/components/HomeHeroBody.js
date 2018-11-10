@@ -20,16 +20,24 @@ export default () =>
         <div className="column home-hero-body__right-column">
           <div className="columns">
             <div className="column">
-              <Icon icon="fa fa-3x fa-server"/>
-              <p className="subtitle">Backend</p>
-            </div>
-            <div className="column">
-                <Icon icon="fa fa-3x fa-code"/>
-                <p className="subtitle">Frontend</p>
-            </div>
-            <div className="column">
-              <Icon icon="fa fa-3x fa-cloud-upload-alt"/>
-              <p className="subtitle">DevOps</p>
+              <div className="home-hero-body__icon-card">
+                <div className="home-hero-body__icon-card__content">
+                  <Icon icon="fa fa-3x fa-code"/>
+                  <p className="subtitle">Frontend</p>
+                </div>
+              </div>
+              <div className="home-hero-body__icon-card">
+                <div className="home-hero-body__icon-card__content">
+                  <Icon icon="fa fa-3x fa-server"/>
+                  <p className="subtitle">Backend</p>
+                </div>
+              </div>
+              <div className="home-hero-body__icon-card">
+                <div className="home-hero-body__icon-card__content">
+                  <Icon icon="fa fa-3x fa-cloud-upload-alt"/>
+                  <p className="subtitle">DevOps</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
