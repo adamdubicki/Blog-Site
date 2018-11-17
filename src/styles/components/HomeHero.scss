@@ -11,6 +11,7 @@
     letter-spacing: 0.25rem;
   }
   &__profile {
+    margin-top: 15px;
     border-radius: 50%;
     width: 15rem;
     height: 15rem;
@@ -19,7 +20,7 @@
   &__right-column {
     margin: auto;
   }
-  &__icon-card {
+  .icon-card {
     display: inline-block;
     padding: 10px;
     width: 150px;
@@ -38,7 +39,7 @@
       text-align: center;
       color: white;
     }
-    .subtitle {
+    &__subtitle {
       color: white;
     }
   }

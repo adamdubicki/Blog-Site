@@ -1,10 +1,25 @@
 import React from 'react';
 
-import Icon from './Icon';
+import IconCard from './IconCard';
 
 import profile from '../../assets/adam-icon.jpg';
 
-export default () => 
+const ICON_CARDS = [
+  {
+    "icon": "fa fa-3x fa-code",
+    "subtitle": "Frontend"
+  },
+  {
+    "icon": "fa fa-3x fa-server",
+    "subtitle": "Backend"
+  },
+  {
+    "icon": "fa fa-3x fa-cloud-upload-alt",
+    "subtitle": "DevOps"
+  }
+]
+
+export default ({ data }) => 
   <div className="home-hero-body hero-body">
     <div className="container has-text-centered typing">
       <div className="columns">
@@ -20,24 +35,12 @@ export default () =>
         <div className="column home-hero-body__right-column">
           <div className="columns">
             <div className="column">
-              <div className="home-hero-body__icon-card">
-                <div className="home-hero-body__icon-card__content">
-                  <Icon icon="fa fa-3x fa-code"/>
-                  <p className="subtitle">Frontend</p>
-                </div>
-              </div>
-              <div className="home-hero-body__icon-card">
-                <div className="home-hero-body__icon-card__content">
-                  <Icon icon="fa fa-3x fa-server"/>
-                  <p className="subtitle">Backend</p>
-                </div>
-              </div>
-              <div className="home-hero-body__icon-card">
-                <div className="home-hero-body__icon-card__content">
-                  <Icon icon="fa fa-3x fa-cloud-upload-alt"/>
-                  <p className="subtitle">DevOps</p>
-                </div>
-              </div>
+              {ICON_CARDS.map(iconCard => (
+                <IconCard 
+                  subtitle={iconCard.subtitle}
+                  icon={iconCard.icon}
+                />
+              ))}
             </div>
           </div>
         </div>

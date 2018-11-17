@@ -1,7 +1,13 @@
 .footer {
   background: $tertiary-color;
-  color: $font-color-primary;
-  .title, .heading {
-    color: $font-color-primary;
+  padding: 32px 64px;
+  &__icon {
+    display: inline-block;
+    margin: 10px 25px;
+    color: white;
+  }
+  &__icon:hover {
+    color: $primary-color-highlight;
+    cursor: pointer;
   }
 }
