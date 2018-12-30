@@ -1,8 +1,29 @@
 @import 'variables';
-@import '~bulma/sass/utilities/initial-variables';
-@import '~bulma/sass/utilities/functions';
-@import '~bulma/bulma';
 
-@import './components/HomeHero.scss';
-@import './components/Footer.scss';
-@import './components/Navbar.scss';
+.front {
+  height: 100vh;
+  
+  &__container {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__icon-list {
+    list-style: none;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__contact {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly
+  }
+}
