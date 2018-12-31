@@ -1,18 +1,25 @@
 @import 'variables';
 
 .front {
-  height: 100vh;
-  
   &__container {
-    margin-top: 32px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
   }
 
-  &__icon-list {
-    list-style: none;
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+
+  &__profile {
+    border-radius: 50%;
+    width: 10rem;
+    box-shadow: 3px 3px black;
   }
 }
 
