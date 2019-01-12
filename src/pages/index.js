@@ -1,28 +1,11 @@
 import React from 'react';
 
 import Icon from '../components/Icon';
-import profile from '../assets/adam-icon.jpg';
+import Hero from '../components/Hero'
 
 export default () =>
   <div>
-    <section className="front">
-      <div className="front__container">
-        <img className="front__profile" src={profile}/>
-        <header className="front__header">
-          <h1>
-            Adam Dubicki
-          </h1>
-          <h2>
-            Full-Stack Developer
-          </h2>
-        </header>
-        <div className="front__icons">
-          Frontend <Icon icon="fa fa-1x fa-code"/> |
-          Backend <Icon icon="fa fa-1x fa-server"/> |
-          DevOps <Icon icon="fa fa-1x fa-cloud-upload-alt"/>
-        </div>
-      </div>
-    </section>
+    <Hero />
     <section>
       <ul>
         <li>

@@ -19,6 +19,7 @@
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-remark": "^1.7.44",
     "react-helmet": "^5.2.0",
+    "react-reveal": "^1.2.2",
     "typography-theme-fairy-gates": "^0.15.11"
   }
 }

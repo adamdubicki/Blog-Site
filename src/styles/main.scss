@@ -1,25 +1,44 @@
 @import 'variables';
 
-.front {
-  &__container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $base-blue;
   &__header {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
   }
+  
+  &__header > h1, h2 {
+    text-align: center;
+    color: white;
+    display: inline;
+    strong {
+      color: $base-pink;
+    }
+  }
+
+  &__profile-wrapper {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50%;
+    box-shadow: 10px 10px 8px #888888;
+  }
 
   &__profile {
     border-radius: 50%;
     width: 10rem;
-    box-shadow: 3px 3px black;
+    height: 10rem;
+    margin: auto;
   }
 }
 
