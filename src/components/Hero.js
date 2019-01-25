@@ -1,36 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import Icon from './Icon';
 import { FRONT_END, BACK_END, DEV_OPS } from '../constants/Icons';
 import profile from '../assets/adam-icon.jpg';
 import Fade from 'react-reveal/Fade';
 
-class Hero extends React.Component {
+class Hero extends Component {
   state = {
     subtitleIndex: 0,
     subtitles: [
       {
-        text: 'Front-end',
+        text: 'Front-End',
         icon: FRONT_END
       },
       {
-        text: 'Back-end',
+        text: 'Back-End',
         icon: BACK_END
       },
       {
         text: 'DevOps',
         icon: DEV_OPS
       }
-    ]
+    ],
+    show: false
   }
 
   componentDidMount() {
     this.interval = setInterval(() => {
-      const { subtitleIndex, subtitles } = this.state;
-      this.setState({
-        subtitleIndex: (subtitleIndex + 1) % subtitles.length
-      }
-    )}, 2000);
+      const { show, subtitleIndex, subtitles } = this.state;
+      this.setState({ 
+        show: !show,
+        subtitleIndex: (subtitleIndex + 1) % subtitles.length 
+      });
+    }, 1500);
   }
 
   componentWillUnmount() {
@@ -49,10 +51,10 @@ class Hero extends React.Component {
           <h1>
             Hello, my name is <strong>Adam</strong>
           </h1>
-          <Fade bottom opposite text spy={subtitleIndex} appear exit>
+          <h2>I am a <strong>Full Stack Developer</strong></h2>
+          <Fade bottom opposite when={this.state.show}>
             <h2>
-              <strong>{text}</strong>&nbsp;
-              <Icon icon={icon}/>
+              <strong>{text}</strong>&nbsp;<Icon icon={icon}/>
             </h2>
           </Fade>
         </header>

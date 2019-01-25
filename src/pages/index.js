@@ -1,12 +1,16 @@
 import React from 'react';
 
 import Icon from '../components/Icon';
-import Hero from '../components/Hero'
+import Hero from '../components/Hero';
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 
 export default () =>
-  <div>
+  <main>
+    <Navbar />
     <Hero />
-    <section>
+    <Footer />
+    {/* <section>
       <ul>
         <li>
           <div>
@@ -101,13 +105,5 @@ export default () =>
           </li>
         </ul>
       </div>
-    </section>
-    <footer className="footer">
-      <h1>Get in touch</h1>
-      <div className="footer__contact">
-        <Icon icon="fab fa-1x fa-github"/>
-        <Icon icon="fab fa-1x fa-linkedin"/>
-        <Icon icon="fas fa-1x fa-envelope"/>
-      </div>
-    </footer>
-  </div>
+    </section> */}
+  </main>
