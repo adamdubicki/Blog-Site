@@ -34,17 +34,15 @@ class Navbar extends Component {
 
     return (
       <section className={navbarClassNames}>
-        <div className='navbar__wrapper'>
-          <div className='navbar__right'>
-            <div className="navbar__item">
-              <h1 className="navbar__title">Adam</h1>
-            </div>
-          </div>
-          <div className='navbar__left'>
-            <div className="navbar__item">Experiance</div>
-            <div className="navbar__item">About</div>
-          </div>
-        </div>
+        <a className="navbar__item">
+          Experiance
+        </a>
+        <a className="navbar__item">
+          About Me
+        </a>
+        <a className="navbar__item">
+          Contact
+        </a>
       </section>
     )
   }

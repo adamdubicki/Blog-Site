@@ -10,7 +10,7 @@
   "dependencies": {
     "bulma": "^0.7.1",
     "classnames": "^2.2.6",
-    "gatsby": "^1.9.277",
+    "gatsby": "^1.9.279",
     "gatsby-link": "^1.6.46",
     "gatsby-plugin-glamor": "^1.6.13",
     "gatsby-plugin-react-helmet": "^2.0.11",

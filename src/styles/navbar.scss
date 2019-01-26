@@ -5,26 +5,18 @@
   width: 100%;
   transition: all 0.5s linear;
   padding: 0 1rem;
+  display: flex;
+  justify-content: row;
+  justify-content: space-evenly;
+  padding: 0.5rem 1rem;
   
+  &__item {
+    color: $base-pink;
+    font-weight: bold;
+  }
+
   &.is-solid {
     background-color: $base-blue;
     box-shadow: rgba(0,0,0,.12) 0 1px 6px, rgba(0,0,0,.12) 0 1px 4px;
-  }
-
-  &__title {
-    color: white;
-    display: inline;
-  }
-
-  &__wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  &__item {
-    padding: 12px 0;
-    display: inline-block;
-    margin: auto 24px 0 auto;
   }
 }
