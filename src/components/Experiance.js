@@ -12,13 +12,13 @@ class Experiance extends Component {
         ],
         description: [
           "Developed backend APIs using Laravel/Lumen & Express",
-          "Deployed releases on AWS Elastic Beanstalk with Docker",
           "Created frontend web applications with React, Redux and Next.js",
-          "Integrated third-party API's such as Facebook Oauth, Stripe, Pusher and Google Vision"
+          "Deployed releases on AWS Elastic Beanstalk, AWS ECS and Docker",
+          "Interviewed junior and intermediate developer candidates"
         ]
       },
       {
-        title: "Graduation",
+        title: "",
         company: "University of Victoria",
         time: "Sep 2013 - Aug 2017",
         images: [
