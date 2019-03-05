@@ -33,8 +33,8 @@ class Navbar extends Component {
     );
 
     return (
-      <section className={navbarClassNames}>
-        <a className="navbar__item">
+      <section>
+        {/* <a className="navbar__item">
           Experiance
         </a>
         <a className="navbar__item">
@@ -42,7 +42,7 @@ class Navbar extends Component {
         </a>
         <a className="navbar__item">
           Contact
-        </a>
+        </a> */}
       </section>
     )
   }

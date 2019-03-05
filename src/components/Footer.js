@@ -25,7 +25,7 @@ class Footer extends Component {
 
     return (
       <footer className="footer">
-        <h1>Get in touch</h1>
+        <h2>Get in touch</h2>
         <div className="footer__contact">
           {iconButtons.map(({icon, href, target}) => (
             <a href={href} target={target} key={icon}>
