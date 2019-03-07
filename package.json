@@ -20,9 +20,11 @@
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-remark": "^1.7.44",
     "react-helmet": "^5.2.0",
+    "react-image-gallery": "^0.8.14",
     "react-images": "^0.5.19",
     "react-photo-gallery": "^6.3.2",
     "react-reveal": "^1.2.2",
+    "react-slick": "^0.23.2",
     "react-timeline-scribble": "^1.0.14",
     "typography-theme-fairy-gates": "^0.15.11"
   }

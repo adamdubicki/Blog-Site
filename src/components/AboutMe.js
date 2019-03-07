@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Gallery from 'react-photo-gallery';
+import Slider from "react-slick";
+
 import bird from '../assets/bird.jpg';
 import cat from '../assets/cat.jpg';
 import chameleon from '../assets/chameleon.jpg';
@@ -19,88 +20,42 @@ import turtle from '../assets/turtle.jpg';
 class AboutMe extends Component {
   render() {
     const photos = [
-      {
-        src: bird,
-        width: 4,
-        height: 3
-      },
-      {
-        src: cat,
-        width: 4,
-        height: 3
-      },
-      {
-        src: chameleon,
-        width: 4,
-        height: 3
-      },
-      {
-        src: elephants,
-        width: 4,
-        height: 3
-      },
-      {
-        src: fox,
-        width: 4,
-        height: 3
-      },
-      {
-        src: helmet,
-        width: 4,
-        height: 6
-      },
-      {
-        src: husky,
-        width: 4,
-        height: 3
-      },
-      {
-        src: jaguar,
-        width: 4,
-        height: 3
-      },
-      {
-        src: octopus,
-        width: 4,
-        height: 3
-      },
-      {
-        src: owl,
-        width: 4,
-        height: 3
-      },
-      {
-        src: owl2,
-        width: 4,
-        height: 3
-      },
-      {
-        src: owl3,
-        width: 4,
-        height: 6
-      },
-      {
-        src: pug,
-        width: 4,
-        height: 3
-      },
-      {
-        src: tiger,
-        width: 4,
-        height: 3
-      },
-      {
-        src: turtle,
-        width: 4,
-        height: 3
-      },
+      bird,
+      cat,
+      chameleon,
+      elephants,
+      fox,
+      helmet,
+      husky,
+      jaguar,
+      octopus,
+      owl,
+      owl2,
+      owl3,
+      pug,
+      tiger,
+      turtle,
     ];
 
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      className: "about-me__slider"
+    };
     return (
       <div className="about-me">
-        <Gallery photos={photos}/>
+        <Slider {...settings}>
+          {photos.map((photo) => (
+            <div className="about-me__slider-item">
+              <img src={photo}/>
+            </div>
+          ))}
+        </Slider>
       </div>
-    )
+    );
   }
 }
 

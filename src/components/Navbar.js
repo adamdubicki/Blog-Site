@@ -32,18 +32,23 @@ class Navbar extends Component {
       { 'is-solid': isSolid }
     );
 
+    const navbarItemClassNames = classNames(
+      'navbar__item',
+      { 'is-solid': isSolid }
+    );
+
     return (
-      <section>
-        {/* <a className="navbar__item">
+      <nav className={navbarClassNames}>
+        <a className={navbarItemClassNames}>
           Experiance
         </a>
-        <a className="navbar__item">
+        <a className={navbarItemClassNames}>
           About Me
         </a>
-        <a className="navbar__item">
+        <a className={navbarItemClassNames}>
           Contact
-        </a> */}
-      </section>
+        </a>
+      </nav>
     )
   }
 }
