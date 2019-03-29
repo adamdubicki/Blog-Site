@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: white;
 
   &__header {
     display: flex;
@@ -15,23 +14,22 @@
   
   &__header > h1, h2 {
     text-align: center;
-    color: black;
+    color: $text-main;
     display: inline;
+    font-size: 20px;
     strong {
-      background: $inverted;
-      color: white;
+      color: $text-accents;
     }
   }
 
   &__profile-wrapper {
-    background: $inverted;
+    background: $background-accents;
     display: flex;
     flex-direction: column;
     align-content: center;
-    width: 11rem;
-    height: 11rem;
+    width: 10.5rem;
+    height: 10.5rem;
     border-radius: 50%;
-    box-shadow: 10px 10px 8px #888888;
   }
 
   &__profile {
@@ -39,5 +37,13 @@
     width: 10rem;
     height: 10rem;
     margin: auto;
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .hero {
+    &__header > h1, h2 {
+      font-size: 32px;
+    }
   }
 }

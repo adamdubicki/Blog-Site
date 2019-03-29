@@ -51,7 +51,7 @@ class Hero extends Component {
           <h1>
             Hello, my name is <strong>Adam</strong>
           </h1>
-          <h2>I am a <strong>Full Stack Developer</strong></h2>
+          <h2>I am a <strong>Full Stack Software Developer</strong></h2>
           <Fade bottom opposite when={this.state.show}>
             <h2>
               <strong>{text}</strong>&nbsp;<Icon icon={icon}/>
