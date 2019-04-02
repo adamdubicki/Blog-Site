@@ -17,6 +17,7 @@
     color: $text-main;
     display: inline;
     font-size: 20px;
+    
     strong {
       color: $text-accents;
     }
@@ -37,6 +38,13 @@
     width: 10rem;
     height: 10rem;
     margin: auto;
+  }
+
+  &__nav {
+    a {
+      outline: 1rem;
+      color: $text-highlight;
+    }
   }
 }
 
