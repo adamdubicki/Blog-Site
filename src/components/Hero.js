@@ -1,68 +1,35 @@
 import React, { Component } from 'react';
-import Fade from 'react-reveal/Fade';
 
+import Scroller from '../components/Scroller';
 import Icon from '../components/Icon';
 
+import { FRONT_END, BACK_END, DEV_OPS } from '../constants/Icons';
+import profile from '../assets/adam-icon.jpg';
 class Hero extends Component {
-  state = {
-    subtitleIndex: 0,
-    show: false
-  }
-
-  componentDidMount() {
-    this.interval = setInterval(() => {
-      const { show, subtitleIndex, subtitles } = this.state;
-      this.setState({ 
-        show: !show,
-        subtitleIndex: (subtitleIndex + 1) % 10
-      });
-    }, 1500);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
-
   render() {
     return (
       <section className="hero">
-        {this.props.children}
+        <div className="hero__profile-wrapper">
+          <img className="hero__profile" src={profile}/>
+        </div>
+        <div className="hero__header">
+          <h1>Hello, my name is <strong>Adam</strong></h1>
+          <h2>I am a <strong>Full Stack Software Developer</strong></h2>
+        </div>
+        <Scroller className="hero__scroller">
+          <p><strong>{'Front End'}</strong>&nbsp;<Icon icon={FRONT_END}/></p>
+          <p><strong>{'Back End'}</strong>&nbsp;<Icon icon={BACK_END}/></p>
+          <p><strong>{'DevOps'}</strong>&nbsp;<Icon icon={DEV_OPS}/></p>
+        </Scroller>
+        <div className="hero__nav">
+          <a href="#about-me">About Me</a> |
+          <a href="#skills">Skills</a> |
+          <a href="#experiance">Experiance</a> |
+          <a href="#contact">Contact</a>
+        </div>
       </section>
     )
   }
 }
-
-const Profile = ({ profile }) => (
-  <div className="hero__profile-wrapper">
-    <img className="hero__profile" src={profile}/>
-  </div>
-);
-
-const Header = ({ children }) => (
-  <header className="hero__header">
-    { children }
-  </header>
-)
-
-const Scroller = ({children }) => {
-  return (
-    // <Fade bottom opposite when={this.state.show}>
-    //   {children}
-    // </Fade>
-    <div>{children[0]}</div>
-  )
-}
-
-const ScrollItem = ({ text, icon }) => (
-  <h2>
-    <strong>{text}</strong>&nbsp;
-    <Icon icon={icon}/>
-  </h2>
-)
-
-Hero.Profile = Profile;
-Hero.Header = Header;
-Hero.Scroller = Scroller;
-Hero.ScrollItem = ScrollItem;
 
 export default Hero;

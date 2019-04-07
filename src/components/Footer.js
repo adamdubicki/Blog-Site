@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import ScrollableAnchor from 'react-scrollable-anchor';
 import Icon from './Icon';
 
 class Footer extends Component {
@@ -24,16 +25,18 @@ class Footer extends Component {
     ]
 
     return (
-      <footer className="footer">
-        <h2>Get in touch</h2>
-        <div className="footer__contact">
-          {iconButtons.map(({icon, href, target}) => (
-            <a href={href} target={target} key={icon}>
-              <Icon icon={icon} />
-            </a>
-          ))}
-        </div>
-      </footer>
+      <ScrollableAnchor id={'contact'}>
+        <footer className="footer">
+          <h2>Get in touch</h2>
+          <div className="footer__contact">
+              {/* {iconButtons.map(({icon, href, target}) => (
+                <a href={href} target={target} key={icon}>
+                  <Icon icon={icon} />
+                </a>
+              ))} */}
+          </div>
+        </footer>
+      </ScrollableAnchor>
     );
   }
 }
