@@ -12,21 +12,13 @@
     align-items: center;
   }
   
-  &__header > h1, h2 {
+  &__header {
     text-align: center;
-    color: $text-main;
     display: inline;
-    font-size: 1.5rem;
   }
 
   p {
     margin: 2rem 0;
-    font-size: 1.5rem;
-    color: $text-main;
-  }
-
-  strong {
-    color: $text-accents
   }
 
   &__profile-wrapper {
@@ -48,34 +40,18 @@
 
   &__nav {
     font-size: 1.5rem;
-    color: $text-main;
     display: none;
-
-    a {
-      border:1px solid $text-highlight;  
-      background-image: none;
-      color: $text-highlight;
-      border-radius: 12%;
-      padding: 10px;
-      cursor: pointer;
-      transition: background 0.5s linear;
-    }
-
-    a:hover {
-      background: $text-highlight;
-      color: black;
-    }
   }
 }
 
 @media only screen and (min-width: $tablet) {
   .hero {
-    &__header, p {
-      font-size: 2rem;
-    }
     &__nav {
       display: inline-block;
       font-size: 1rem;
+      a {
+        margin: 0 10px;
+      }
     }
   }
 }

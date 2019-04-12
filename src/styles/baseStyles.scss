@@ -1,0 +1,32 @@
+body {
+  font-size: 1.5rem;
+  background: $background;
+  color: $text-main;
+  
+  a {
+    text-decoration: none;
+    text-shadow: none;
+    background: none;
+  }
+  
+  strong { 
+    color: $text-accents 
+  }
+
+  .title { 
+    color: $text-main; 
+  }
+  
+  .body-text { 
+    color: $text-main 
+  }
+
+}
+
+@media only screen and (min-width: $tablet) {
+  
+  .main {
+    font-size: 2rem;
+  }
+
+}
