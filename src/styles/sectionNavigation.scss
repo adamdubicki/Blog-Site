@@ -1,17 +1,24 @@
 .section-navigation {
-
+  font-size: 1.5rem;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  padding: 10px;
+  z-index: 64;
+  background: $background-light;
+  
   a {
     background-image: none;
     color: $text-highlight;
     box-sizing: border-box;
     margin: 0 10px;
   }
-
+  
   a:hover {
     background: $text-highlight;
     color: black;
   }
-
+  
   .is-bordered {
     border:1px solid $text-highlight;
     border-radius: 16%;
@@ -20,24 +27,57 @@
     color: $text-highlight;
     transition: background 0.5s linear;
   }
-
+  
   &__hamburger {
     width: 50px;
     background-color: $background;
-
+    z-index: 8;
+    padding: 10px;
+    display: block;
+    
     &.is-open {
       background-color: $text-highlight;
       color: $background;
     }
   }
-
-  font-size: 1.5rem;
-  display: none;
+  
+  &__links {
+    display: none;
+    background: $background-light;
+    padding: 10px;
+    position: absolute;
+    flex-direction: column;
+    top: 60px;
+    left: 10px;
+    z-index: 4;
+    
+    &.is-open {
+      display: flex;
+    }
+  }
+  
 }
 
 @media only screen and (min-width: $tablet) {
+  
   .section-navigation {
-    display: inline-block;
+    display: flex;
     font-size: 1rem;
+    position: initial;
+    justify-content: center;
+    background: $background;
+    
+    &__hamburger {
+      display: none;
+    }
+    
+    &__links {
+      display: flex;
+      flex-direction: row;
+      position: initial;
+      background: $background;
+    }
+
   }
+
 }

@@ -19,10 +19,20 @@ class SectionNavigation extends Component {
 
   render() {
     const { isOpen } = this.state;
+
     const burgerClassNames = classNames(
       'section-navigation__hamburger',
-      'is-bordered',
+      { 'is-bordered': !isOpen },
       { 'is-open': isOpen }
+    );
+
+    const sectionLinkClassNames = classNames(
+      'section-navigation__links',
+      { 'is-open': isOpen }
+    );
+
+    const linkClassNames = classNames(
+      { 'is-bordered': !isOpen }
     );
 
     return (
@@ -33,11 +43,11 @@ class SectionNavigation extends Component {
         >
           <Icon icon={isOpen ? TIMES : BARS}/>
         </button>
-        <div className="section-navigation__links">
-          <a className="is-bordered" href="#about-me">About Me</a>|
-          <a className="is-bordered" href="#skills">Skills</a>|
-          <a className="is-bordered" href="#experiance">Experiance</a>|
-          <a className="is-bordered" href="#contact">Contact</a>
+        <div className={sectionLinkClassNames}>
+          <a className={linkClassNames} href="#about-me">About Me</a>
+          <a className={linkClassNames} href="#skills">Skills</a>
+          <a className={linkClassNames} href="#experiance">Experiance</a>
+          <a className={linkClassNames} href="#contact">Contact</a>
         </div>
       </nav>
     )
