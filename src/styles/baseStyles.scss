@@ -21,6 +21,20 @@ body {
     color: $text-main 
   }
 
+  .is-bordered {
+    border:1px solid $text-highlight;
+    border-radius: 16%;
+    padding: 10px;
+    cursor: pointer;
+    color: $text-highlight;
+    transition: background 0.5s linear;
+  }
+
+  a:hover, a.is-active {
+    background: $text-highlight;
+    color: black;
+  }
+
 }
 
 @media only screen and (min-width: $tablet) {

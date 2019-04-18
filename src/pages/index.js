@@ -14,7 +14,7 @@ class Index extends Component {
         <AboutMe />
         {/* <Skills /> */}
         {/* <Experiance /> */}
-        {/* <Footer /> */}
+        <Footer />
       </main>
     )
   }

@@ -15,26 +15,12 @@
     z-index: 64;
     background: $background-light;
   }
-
-  a:hover, a.is-active {
-    background: $text-highlight;
-    color: black;
-  }
   
   a {
     background-image: none;
     color: $text-highlight;
     box-sizing: border-box;
     margin: 10px;
-  }
-  
-  .is-bordered {
-    border:1px solid $text-highlight;
-    border-radius: 16%;
-    padding: 10px;
-    cursor: pointer;
-    color: $text-highlight;
-    transition: background 0.5s linear;
   }
 
   &__cover.is-open {

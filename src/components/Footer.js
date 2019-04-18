@@ -27,13 +27,13 @@ class Footer extends Component {
     return (
       <ScrollableAnchor id={'contact'}>
         <footer className="footer">
-          <h2>Get in touch</h2>
+          <h2 className="title">Get in touch</h2>
           <div className="footer__contact">
-              {/* {iconButtons.map(({icon, href, target}) => (
-                <a href={href} target={target} key={icon}>
-                  <Icon icon={icon} />
-                </a>
-              ))} */}
+            {iconButtons.map(({icon, href, target}) => (
+              <a className="is-bordered" href={href} target={target} key={icon}>
+                <Icon icon={icon} />
+              </a>
+            ))}
           </div>
         </footer>
       </ScrollableAnchor>
