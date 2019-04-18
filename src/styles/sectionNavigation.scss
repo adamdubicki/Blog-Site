@@ -3,10 +3,10 @@
   top: 0px;
   width: 100vw;
   padding: 10px;
-  z-index: 64;
   background: $background-light;
   transition: all 0.5s ease;
   font-size: 1rem;
+  z-index: 100;
 
   &.is-floating {
     width: 100vw;
@@ -36,6 +36,15 @@
     color: $text-highlight;
     transition: background 0.5s linear;
   }
+
+  &__cover.is-open {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
   
   &__hamburger {
     width: 50px;
@@ -55,10 +64,8 @@
   &__links {
     display: none;
     background: $background-light;
-    position: absolute;
     top: 50px;
     left: 10px;
-    z-index: 4;
     flex-direction: column;
 
     &.is-open {

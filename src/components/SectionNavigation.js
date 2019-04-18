@@ -55,10 +55,15 @@ class SectionNavigation extends Component {
       { 'is-open': isOpen }
     );
 
+    const coverClassNames = classNames(
+      'section-navigation__cover',
+      { 'is-open': isOpen }
+    )
+
     const links = [
       'About Me',
       'Skills',
-      'Experiance',
+      'Experience',
       'Contact'
     ];
 
@@ -70,6 +75,10 @@ class SectionNavigation extends Component {
         >
           <Icon icon={isOpen ? TIMES : BARS}/>
         </button>
+        <div 
+          className={coverClassNames}
+          onClick={() => this.setState({ isOpen:false })}
+        />
         <div className={sectionLinkClassNames}>
           {links.map((link) => {
             const href = `#${link.split(' ').join('-').toLowerCase()}`;

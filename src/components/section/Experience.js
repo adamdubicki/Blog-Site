@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Timeline, Event } from "react-timeline-scribble";
 import ScrollableAnchor from 'react-scrollable-anchor'
 
-class Experiance extends Component {
+class Experience extends Component {
   render() {
     const events = [
       {
@@ -64,9 +64,9 @@ class Experiance extends Component {
     ];
 
     return (
-      <ScrollableAnchor id={'experiance'}>
-        <section className="experiance">
-          <h2>Experiance</h2>
+      <ScrollableAnchor id={'experience'}>
+        <section className="experience">
+          <h2>Experience</h2>
           <Timeline>
             {events.map(({ interval, title, subtitle, description }) => (
               <Event interval={interval} title={title} subtitle={subtitle}>
@@ -82,5 +82,5 @@ class Experiance extends Component {
   }
 }
 
-export default Experiance;
+export default Experience;
 
