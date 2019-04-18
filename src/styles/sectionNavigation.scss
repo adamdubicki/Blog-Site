@@ -1,22 +1,31 @@
 .section-navigation {
-  font-size: 1.5rem;
   position: fixed;
   top: 0px;
   width: 100vw;
   padding: 10px;
   z-index: 64;
   background: $background-light;
+  transition: all 0.5s ease;
+  font-size: 1rem;
+
+  &.is-floating {
+    width: 100vw;
+    top: 0px;
+    position: fixed;
+    z-index: 64;
+    background: $background-light;
+  }
+
+  a:hover, a.is-active {
+    background: $text-highlight;
+    color: black;
+  }
   
   a {
     background-image: none;
     color: $text-highlight;
     box-sizing: border-box;
-    margin: 0 10px;
-  }
-  
-  a:hover {
-    background: $text-highlight;
-    color: black;
+    margin: 10px;
   }
   
   .is-bordered {
@@ -34,6 +43,8 @@
     z-index: 8;
     padding: 10px;
     display: block;
+    border-radius: 16%;
+    font-size: 1rem;
     
     &.is-open {
       background-color: $text-highlight;
@@ -44,15 +55,20 @@
   &__links {
     display: none;
     background: $background-light;
-    padding: 10px;
     position: absolute;
-    flex-direction: column;
-    top: 60px;
+    top: 50px;
     left: 10px;
     z-index: 4;
-    
+    flex-direction: column;
+
     &.is-open {
       display: flex;
+      margin-top: 10px;
+      width: 100vw;
+    }
+
+    &.is-floating {
+      background: $background-light;
     }
   }
   
@@ -76,6 +92,7 @@
       flex-direction: row;
       position: initial;
       background: $background;
+      transition: all 0.5s ease;
     }
 
   }
