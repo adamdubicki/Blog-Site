@@ -80,11 +80,11 @@ class AboutMe extends Component {
     return (
       <ScrollableAnchor id={'about-me'}>
         <section className="about-me">
-          <h2 className="title">About Me</h2>
-          {/* <p className="about-me__content">
+          <h2 className="title is-underlined">About Me</h2>
+          <p className="about-me__content">
             I am a software developer living in beautiful Victoria, British Columbia. I received my bachelor's degree in computer science from UVic in August 2017. Some of my main interests are in web development, data mining, and computer graphics.
             When I am not coding, I enjoy hiking and cycling. Climbing Mt. Finlayson in the summer has always been my favorite. When it's too cold for hiking, I am always keen to sit down and play some board games. I am also self-taught in drawing and use it to relax.
-          </p> */}
+          </p>
           <img src=""/>
           <div className="about-me__slider-container">
             <Slider {...settings}>

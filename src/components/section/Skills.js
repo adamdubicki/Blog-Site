@@ -8,7 +8,7 @@ class Skills extends Component {
     return (
       <ScrollableAnchor id={'skills'}>
         <section className="skills">
-          <h2>Skills</h2>
+          <h2 className="title is-underlined">Skills</h2>
         </section>
       </ScrollableAnchor>
     )

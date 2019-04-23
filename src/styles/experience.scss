@@ -1,0 +1,22 @@
+.experience {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__timeline {
+    padding: 10%;
+    font-size: 1rem;
+
+    h3 {
+      color: $text-accents;
+    }
+
+    h4 {
+      color: white;
+    }
+
+    &-image {
+      width: 20%;
+    }
+  }
+}

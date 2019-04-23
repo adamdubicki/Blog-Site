@@ -7,58 +7,52 @@ class Experience extends Component {
   render() {
     const events = [
       {
-        title: "Junior Full Stack Developer",
+        title: "Full Stack Software Developer",
         subtitle: "Freshworks Studio",
         interval: "Oct 2017 - Present",
-        images: [
-          "https://media.licdn.com/dms/image/C560BAQHoZWFCL2LhEQ/company-logo_400_400/0?e=1556755200&v=beta&t=g0b0v4fxBrdqIAlywmC5-M2xzvBIHizxk8bp96gOnvQ"
-        ],
+        image: "https://media.licdn.com/dms/image/C560BAQHoZWFCL2LhEQ/company-logo_400_400/0?e=1556755200&v=beta&t=g0b0v4fxBrdqIAlywmC5-M2xzvBIHizxk8bp96gOnvQ",
         description: [
-          "Developed backend APIs using Laravel/Lumen & Express",
-          "Created frontend web applications with React, Redux and Next.js",
-          "Deployed releases on AWS Elastic Beanstalk, AWS ECS and Docker",
-          "Interviewed junior and intermediate developer candidates"
+          "Built RESTful and GraphQL APIs using Laravel/Lumen & Express",
+          "Designed and maintained MySQL, Postgresql & AWS DynamodDB databases",
+          "Created web applications using React, Redux and Next.js",
+          "Coordinated production deployments and migrations onto AWS",
+          "Helped interview and evaluate junior and intermediate developer candidates",
+          "Integrated third-party APIs such as Facebook Oauth, Stripe, Pusher and Google Vision",
+          "Wrote unit and automated tests using PHPUnit and Jest"
         ]
       },
       {
         title: "Graduation",
         subtitle: "University of Victoria",
         interval: "Aug 2017",
-        images: [
-          "https://media.licdn.com/dms/image/C560BAQEo4ZvWzpKgEw/company-logo_400_400/0?e=1556755200&v=beta&t=NJgPPfcY_7qHmq3t1GQdA7h0ekUQ6TuS3j1Oy6s9CSM"
-        ],
+        image: "https://media.licdn.com/dms/image/C560BAQEo4ZvWzpKgEw/company-logo_400_400/0?e=1556755200&v=beta&t=NJgPPfcY_7qHmq3t1GQdA7h0ekUQ6TuS3j1Oy6s9CSM",
         description: [
-          "Bachelors Degree with distinction",
+          "Bachelor's Degree with Distinction",
           "Computer Science with Software Engineering Option",
-          "GPA: 7.13 / 9.0 "
+          "GPA: 7.13 / 9.0"
         ]
       },
       {
-        title: "Junior Back-end Developer",
+        title: "Junior Backend Software Developer",
         subtitle: "Giftbit + Lightrail",
         interval: "May 2016 - Dec 2016",
-        images: [
-          "https://media.licdn.com/dms/image/C510BAQGquDZ9MxMkzw/company-logo_400_400/0?e=1556755200&v=beta&t=MbZPOsm7BYQnMVtYtpfXM0PSZ5n2fd__eqiHxyRaYKw"
-        ],
+        image: "https://media.licdn.com/dms/image/C510BAQGquDZ9MxMkzw/company-logo_400_400/0?e=1556755200&v=beta&t=MbZPOsm7BYQnMVtYtpfXM0PSZ5n2fd__eqiHxyRaYKw",
         description: [
-          "Developed backend APIs using Laravel/Lumen & Express",
-          "Deployed releases on AWS Elastic Beanstalk with Docker",
-          "Created frontend web applications with React, Redux and Next.js",
-          "Integrated third-party API's such as Facebook Oauth, Stripe, Pusher and Google Vision"
+          "Built RESTful APIs and backend services with Grails & Groovy",
+          "Performed database migrations and production deployments",
+          "Integrated third-party APIs",
+          "Wrote unit and automated tests using Spock, Jest, and Supertest"
         ]
       },
       {
         title: "QA Analyst",
         subtitle: "IBM",
         interval: "Jan 2015 - Apr 2015",
-        images: [
-          "https://media.licdn.com/dms/image/C560BAQEZL5_LD7kuhg/company-logo_400_400/0?e=1556755200&v=beta&t=2F5prnODgL7RQJB_4BoqQ5XqxGLpfOrm6kdpA3HOqTM"
-        ],
+        image: "https://media.licdn.com/dms/image/C560BAQEZL5_LD7kuhg/company-logo_400_400/0?e=1556755200&v=beta&t=2F5prnODgL7RQJB_4BoqQ5XqxGLpfOrm6kdpA3HOqTM",
         description: [
-          "Developed backend APIs using Laravel/Lumen & Express",
-          "Deployed releases on AWS Elastic Beanstalk with Docker",
-          "Created frontend web applications with React, Redux and Next.js",
-          "Integrated third-party API's such as Facebook Oauth, Stripe, Pusher and Google Vision"
+          "Performed manual testing",
+          "Ran and created automated regression tests using Selenium Webdriver",
+          "Filed bug reports detailing reproduction steps",
         ]
       }
     ];
@@ -66,16 +60,23 @@ class Experience extends Component {
     return (
       <ScrollableAnchor id={'experience'}>
         <section className="experience">
-          <h2>Experience</h2>
-          <Timeline>
-            {events.map(({ interval, title, subtitle, description }) => (
-              <Event interval={interval} title={title} subtitle={subtitle}>
-                {description.map((descriptionItem) => (
-                  <p>{descriptionItem}</p>
-                ))}
-              </Event>
-            ))};
-          </Timeline>
+          <h2 className="title is-underlined">Experience</h2>
+          <div className='experience__timeline'>
+            <Timeline>
+              {events.map(({ interval, title, subtitle, description }) => (
+                <Event 
+                  interval={interval}
+                  title={title}
+                  subtitle={subtitle}
+                  key={subtitle}
+                >
+                  {description.map((descriptionItem, index) => (
+                    <p key={index}>{descriptionItem}</p>
+                  ))}
+                </Event>
+              ))}
+            </Timeline>
+          </div>
         </section>
       </ScrollableAnchor>
     )

@@ -10,6 +10,7 @@ import favicon16x16 from '../assets/favicon-16x16.png'
 export default ({ children }) => (
   <div id="app">
     <Helmet>
+      <html lang="en"/>
       <title>Adam Dubicki | Software Developer Victoria BC</title>
       <meta name="description" content="fllooopsdoaspdoas"/>
       <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon}/>

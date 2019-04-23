@@ -4,7 +4,8 @@
   align-items: center;
 
   &__contact {
-    padding: 50px;
+    padding: 50px 0px;
+    display: flex;
 
     a {
       margin: 25px;

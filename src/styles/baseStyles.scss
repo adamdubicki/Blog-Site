@@ -21,6 +21,11 @@ body {
     color: $text-main 
   }
 
+  .is-underlined {
+    border-bottom: 1px solid $text-accents;
+    padding-bottom: 10px;
+  }
+
   .is-bordered {
     border:1px solid $text-highlight;
     border-radius: 16%;

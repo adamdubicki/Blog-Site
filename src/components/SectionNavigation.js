@@ -72,6 +72,11 @@ class SectionNavigation extends Component {
         <button
           className={burgerClassNames}
           onClick={() => this.onBurgerClick()}
+          aria-label={
+            isOpen 
+              ? 'close navigation options' 
+              : 'open navigation options'
+          }
         >
           <Icon icon={isOpen ? TIMES : BARS}/>
         </button>
