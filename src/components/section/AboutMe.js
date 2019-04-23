@@ -19,6 +19,8 @@ import pug from       '../../assets/pug.jpg';
 import tiger from     '../../assets/tiger.jpg';
 import turtle from    '../../assets/turtle.jpg';
 
+import battlesnake from '../../assets/battlesnake.png';
+
 class AboutMe extends Component {
   render() {
     const photos = [
@@ -79,13 +81,22 @@ class AboutMe extends Component {
 
     return (
       <ScrollableAnchor id={'about-me'}>
-        <section className="about-me">
+        <section className="about-me section-container">
           <h2 className="title is-underlined">About Me</h2>
           <p className="about-me__content">
-            I am a software developer living in beautiful Victoria, British Columbia. I received my bachelor's degree in computer science from UVic in August 2017. Some of my main interests are in web development, data mining, and computer graphics.
-            When I am not coding, I enjoy hiking and cycling. Climbing Mt. Finlayson in the summer has always been my favorite. When it's too cold for hiking, I am always keen to sit down and play some board games. I am also self-taught in drawing and use it to relax.
+            I am a software developer living in beautiful Victoria, British Columbia.
+            I received my bachelor's degree in computer science from UVic in August 2017.
+            Some of my main interests are in web development, data mining, and computer graphics.
+            When I am not coding, I enjoy hiking and cycling. Climbing Mt. Finlayson in the summer is my favorite.
+            When it's too cold for hiking, I am always keen to sit down and play some board games.
+            I am also self-taught in scratch boarding and love to draw animals.
           </p>
-          <img src=""/>
+          <p className="about-me__content">
+            I am a three-time competitor in the programming competition
+            <a href="https://events.battlesnake.io/" target="_blank"> Battlesnake</a>.
+            In 2019, I volunteered at the event as Bounty Snake sponsor.
+            <img src={battlesnake}/>
+          </p>
           <div className="about-me__slider-container">
             <Slider {...settings}>
               {photos.map((photo) => (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
 
-import "../styles/index.scss"
+import "../styles/index.scss";
 
 import appleTouchIcon from '../assets/apple-touch-icon.png';
 import favicon32x32 from '../assets/favicon-32x32.png'

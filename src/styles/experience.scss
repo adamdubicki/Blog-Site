@@ -1,11 +1,11 @@
 .experience {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 
   &__timeline {
-    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-size: 1rem;
+    padding-left: 5%;
 
     h3 {
       color: $text-accents;

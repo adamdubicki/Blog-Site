@@ -7,9 +7,10 @@ class Skills extends Component {
   render() {
     return (
       <ScrollableAnchor id={'skills'}>
-        <section className="skills">
+        <section className="skills section-container">
           <h2 className="title is-underlined">Skills</h2>
         </section>
+        
       </ScrollableAnchor>
     )
   }

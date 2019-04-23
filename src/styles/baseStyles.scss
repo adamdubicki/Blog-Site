@@ -35,6 +35,13 @@ body {
     transition: background 0.5s linear;
   }
 
+  .section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+  }
+
   a:hover, a.is-active {
     background: $text-highlight;
     color: black;

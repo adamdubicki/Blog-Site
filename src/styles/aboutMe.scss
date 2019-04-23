@@ -1,9 +1,7 @@
 .about-me {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 
   &__content {
+    font-size: 1rem;
     width: 90%;
   }
 
@@ -38,5 +36,12 @@
       }
     }
   }
+}
 
+@media only screen and (min-width: $tablet) {
+  .about-me {
+    &__content {
+      width: 50%;
+    }
+  }
 }

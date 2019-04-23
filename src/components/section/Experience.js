@@ -59,7 +59,7 @@ class Experience extends Component {
 
     return (
       <ScrollableAnchor id={'experience'}>
-        <section className="experience">
+        <section className="experience section-container">
           <h2 className="title is-underlined">Experience</h2>
           <div className='experience__timeline'>
             <Timeline>

@@ -26,7 +26,7 @@ class Footer extends Component {
 
     return (
       <ScrollableAnchor id={'contact'}>
-        <footer className="footer">
+        <footer className="footer section-container">
           <h2 className="title is-underlined">Get in touch</h2>
           <div className="footer__contact">
             {iconButtons.map(({ icon, href, target }) => (

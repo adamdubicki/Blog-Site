@@ -20,11 +20,11 @@ class Hero extends Component {
             <h1 className="title">Hello, my name is <strong>Adam</strong></h1>
             <h2 className="title">I am a <strong>Full Stack Software Developer</strong></h2>
           </div>
-          {/* <Scroller className="hero__scroller"> */}
-            {/* <p><strong>Front End</strong>&nbsp;<Icon icon={FRONT_END}/></p> */}
-            {/* <p><strong>Back End</strong>&nbsp;<Icon icon={BACK_END}/></p> */}
-            {/* <p><strong>DevOps</strong>&nbsp;<Icon icon={DEV_OPS}/></p> */}
-          {/* </Scroller> */}
+          <Scroller className="hero__scroller">
+            <p><strong>Front End</strong>&nbsp;<Icon icon={FRONT_END}/></p>
+            <p><strong>Back End</strong>&nbsp;<Icon icon={BACK_END}/></p>
+            <p><strong>DevOps</strong>&nbsp;<Icon icon={DEV_OPS}/></p>
+          </Scroller>
           <SectionNavigation />
         </section>
       </ScrollableAnchor>
