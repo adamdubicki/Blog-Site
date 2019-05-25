@@ -12,7 +12,7 @@ export default ({ children }) => (
     <Helmet>
       <html lang="en"/>
       <title>Adam Dubicki | Software Developer Victoria BC</title>
-      <meta name="description" content="fllooopsdoaspdoas"/>
+      <meta name="description" content="Adam Dubicki is a Full Stack Software Developer living Victoria BC."/>
       <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon}/>
       <link rel="icon" type="image/png" sizes="32x32" href={favicon32x32}/>
       <link rel="icon" type="image/png" sizes="16x16" href={favicon16x16}/>

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Hero from '../components/section/Hero';
 import AboutMe from '../components/section/AboutMe';
 import Skills from '../components/section/Skills';
-import Experiance from '../components/section/Experience';
+import Experience from '../components/section/Experience';
 import Footer from '../components/Footer';
 
 class Index extends Component {
@@ -13,7 +13,7 @@ class Index extends Component {
         <Hero />
         <AboutMe />
         <Skills />
-        <Experiance />
+        <Experience />
         <Footer />
       </main>
     )

@@ -1,5 +1,18 @@
 .skills {
-  display: flex;
-  align-items: center;
-  flex-direction: column; 
+
+  &__row {
+    flex-direction: row;
+    padding: 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
 }

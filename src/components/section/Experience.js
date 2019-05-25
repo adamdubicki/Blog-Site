@@ -12,11 +12,11 @@ class Experience extends Component {
         interval: "Oct 2017 - Present",
         image: "https://media.licdn.com/dms/image/C560BAQHoZWFCL2LhEQ/company-logo_400_400/0?e=1556755200&v=beta&t=g0b0v4fxBrdqIAlywmC5-M2xzvBIHizxk8bp96gOnvQ",
         description: [
-          "Built RESTful and GraphQL APIs using Laravel/Lumen & Express",
+          "Built RESTful APIs using Laravel/Lumen & Express",
           "Designed and maintained MySQL, Postgresql & AWS DynamodDB databases",
           "Created web applications using React, Redux and Next.js",
           "Coordinated production deployments and migrations onto AWS",
-          "Helped interview and evaluate junior and intermediate developer candidates",
+          "Helped interview junior and intermediate developer candidates",
           "Integrated third-party APIs such as Facebook Oauth, Stripe, Pusher and Google Vision",
           "Wrote unit and automated tests using PHPUnit and Jest"
         ]
