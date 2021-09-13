@@ -1,26 +1,19 @@
-import React, { Component } from 'react';
+import React from "react"
+import Container from "../components/container"
+import Image from "../components/image"
+import SEO from "../components/seo"
 
-import Hero from '../components/section/Hero';
-import AboutMe from '../components/section/AboutMe';
-import Skills from '../components/section/Skills';
-import Experience from '../components/section/Experience';
-import Footer from '../components/Footer';
+const IndexPage = () => (
+  <Container>
+    <SEO title="Home" />
+    <h1>Hi people</h1>
+    <p>Welcome to your new Gatsby site with ant design! (antd)</p>
+    <p>You can find all Ant Design components <a href="https://ant.design/components/button/">here</a></p>
+    <p>Scroll down if you haven't already!</p>
+    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+      <Image />
+    </div>
+  </Container>
+)
 
-class Index extends Component {
-  render() {
-    return (
-      <main>
-        <Hero />
-        <AboutMe />
-        <Skills />
-        <Experience />
-        <Footer />
-      </main>
-    )
-  }
-}
-
-
-export default Index;
-
-
+export default IndexPage
