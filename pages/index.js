@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Row, Col } from "react-simple-flex-grid";
 
 import {
@@ -70,7 +69,7 @@ export default function Home() {
           <Row className="w-full h-screen" gutter={40} align="middle">
             <Col xs={12} sm={12} md={6} lg={6} xl={6}>
               <div className="flex flex-row-reverse" role="presentation">
-                <Image
+                <img
                   layout="intrinsic"
                   height={1000}
                   width={652}
@@ -119,7 +118,7 @@ export default function Home() {
           <Row className="px-12" gutter={40} align="middle">
             <Col xs={12} sm={12} md={6} lg={6} xl={6}>
               <div className="flex flex-row-reverse" role="presentation">
-                <Image
+                <img
                   layout="intrinsic"
                   height={512}
                   width={512}
