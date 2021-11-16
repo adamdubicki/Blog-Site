@@ -280,11 +280,11 @@ export default function Home() {
                 date: "May 2020 - Present",
                 description: [
                   "Built RESTful APIs using Django and python with AWS-Lambda",
-                  "Designed and maintained MySQL, Postgresql & AWS DynamodDB databases",
+                  "Designed and maintained MySQL, Postgres & AWS Dynamod DB databases",
                   "Created web applications using React with Hooks",
                   "Coordinated production deployments and migrations onto AWS and Heroku",
                   "Helped interview junior and intermediate developer candidates",
-                  "Wrote and architected a React Native mobile application",
+                  "Built and coordinated the development of a new React Native mobile application",
                   "Optimized and consolidated the backend architecture to reduce network traffic by over 95%",
                   "Helped plan and organize service migration in a micro-service architecture across several cloud hosting platforms",
                 ],
@@ -295,7 +295,7 @@ export default function Home() {
                 date: "Oct 2017 - May 2020",
                 description: [
                   "Built RESTful APIs using Laravel/Lumen & Express",
-                  "Designed and maintained MySQL, Postgresql & AWS DynamodDB databases",
+                  "Designed and maintained MySQL, Postgres & AWS Dynamod DB databases",
                   "Created web applications using React, Redux and Next.js",
                   "Coordinated production deployments and migrations onto AWS",
                   "Helped interview junior and intermediate developer candidates",
