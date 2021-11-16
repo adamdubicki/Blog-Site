@@ -1,6 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Row, Col } from "react-simple-flex-grid";
+
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
 import {
   AiFillLinkedin,
   AiFillGithub,
@@ -90,17 +95,17 @@ export default function Home() {
                   align="middle"
                   className="md:text-2xl sm:text-md xs:text-sm text-primary text-center"
                 >
-                  <Col xs={6} sm={6} md={3} lg={3} xl={3}>
+                  <Col xs={6} sm={6} md={6} lg={3} xl={3} className="px-5">
                     <a href="#about-me">About Me</a>
                   </Col>
-                  <Col xs={6} sm={6} md={3} lg={3} xl={3}>
+                  <Col xs={6} sm={6} md={6} lg={3} xl={3} className="px-5">
                     <a href="#skills">Skills</a>
                   </Col>
-                  <Col xs={6} sm={6} md={3} lg={3} xl={3}>
+                  <Col xs={6} sm={6} md={6} lg={3} xl={3} className="px-5">
                     <a href="#experience">Experience</a>
                   </Col>
-                  <Col xs={6} sm={6} md={3} lg={3} xl={3}>
-                    Contact
+                  <Col xs={6} sm={6} md={6} lg={3} xl={3} className="px-5">
+                    <a href="#contact">Contact</a>
                   </Col>
                 </Row>
               </div>
@@ -246,7 +251,9 @@ export default function Home() {
                 <hr />
                 <ul>
                   {skills.map((skill) => (
-                    <li className="text-center">{skill}</li>
+                    <li className="text-center" key={skill}>
+                      {skill}
+                    </li>
                   ))}
                 </ul>
               </Col>
@@ -265,10 +272,103 @@ export default function Home() {
               </h3>
             </Col>
           </Row>
+          <VerticalTimeline>
+            {[
+              {
+                position: "Full Stack Software Developer",
+                company: "Cuboh",
+                date: "May 2020 - Present",
+                description: [
+                  "Built RESTful APIs using Django and python with AWS-Lambda",
+                  "Designed and maintained MySQL, Postgresql & AWS DynamodDB databases",
+                  "Created web applications using React with Hooks",
+                  "Coordinated production deployments and migrations onto AWS and Heroku",
+                  "Helped interview junior and intermediate developer candidates",
+                  "Wrote and architected a React Native mobile application",
+                  "Optimized and consolidated the backend architecture to reduce network traffic by over 95%",
+                  "Helped plan and organize service migration in a micro-service architecture across several cloud hosting platforms",
+                ],
+              },
+              {
+                position: "Junior->Intermediate Full Stack Software Developer",
+                company: "FreshWorks Studio",
+                date: "Oct 2017 - May 2020",
+                description: [
+                  "Built RESTful APIs using Laravel/Lumen & Express",
+                  "Designed and maintained MySQL, Postgresql & AWS DynamodDB databases",
+                  "Created web applications using React, Redux and Next.js",
+                  "Coordinated production deployments and migrations onto AWS",
+                  "Helped interview junior and intermediate developer candidates",
+                  "Integrated third-party APIs such as Facebook Oauth, Stripe, Pusher and Google Vision",
+                  "Wrote unit and automated tests using PHPUnit and Jest",
+                  "Created frontend libraries, CI/CD and SEO optimized webpages for <a class='text-primary' href='https://ca.aplaceformom.com/'>a Place for Mom</a>",
+                  "Built RESTful APIs and backend services for the <a class='text-primary' href='https://freshworks.io/portfolio/foundry-bc-virtual-health-clinic-app/'>Foundry Virtual Clinic app</a>",
+                ],
+              },
+              {
+                position: "Graduation",
+                company: "University of Victoria",
+                date: "Aug 2017",
+                description: [
+                  "Bachelor's Degree with Distinction",
+                  "Computer Science with Software Engineering Option",
+                  "GPA: 7.13 / 9.0",
+                ],
+              },
+              {
+                position: "Junior Backend Software Developer",
+                company: "Giftbit / Lightrail",
+                date: "May 2016 - Dec 2016",
+                description: [
+                  "Built RESTful APIs and backend services with Grails & Groovy",
+                  "Performed database migrations and production deployments",
+                  "Integrated third-party APIs",
+                  "Wrote unit and automated tests using Spock, Jest, and Supertest",
+                ],
+              },
+              {
+                position: "QA Analyst",
+                company: "IBM",
+                date: "Jan 2015 - Apr 2015",
+                description: [
+                  "Performed manual testing",
+                  "Ran and created automated regression tests using Selenium Webdriver",
+                  "Filed bug reports detailing reproduction steps",
+                ],
+              },
+            ].map(({ company, position, description, date }) => (
+              <VerticalTimelineElement
+                key={`${company}-${position}`}
+                className="vertical-timeline-element--work"
+                contentStyle={{ background: "black", color: "#21bfc2" }}
+                date={date}
+                contentArrowStyle={{
+                  borderRight: "7px solid #e95378",
+                }}
+              >
+                <h3 className="vertical-timeline-element-title text-primary">
+                  {position}
+                </h3>
+                <h4 className="vertical-timeline-element-subtitle">
+                  {company}
+                </h4>
+                <hr />
+                <ul>
+                  {description.map((item, index) => (
+                    <li key={index}>
+                      - <b dangerouslySetInnerHTML={{ __html: item }} />
+                    </li>
+                  ))}
+                </ul>
+              </VerticalTimelineElement>
+            ))}
+          </VerticalTimeline>
         </section>
       </main>
-
-      <footer className="flex items-center justify-center w-full">
+      <footer
+        className="flex items-center justify-center w-full pt-10"
+        id="contact"
+      >
         <Row
           align="middle"
           className="md:text-2xl sm:text-md xs:text-sm text-center mb-24"
@@ -279,6 +379,7 @@ export default function Home() {
           </Col>
           <Col className="text-center text-3xl" span={3}>
             <a
+              aria-label="LinkedIn"
               href="https://www.linkedin.com/in/adam-dubicki/"
               rel="noreferrer"
               target="_blank"
@@ -288,6 +389,7 @@ export default function Home() {
           </Col>
           <Col className="text-center text-3xl" span={3}>
             <a
+              aria-label="Github"
               href="https://github.com/adamdubicki"
               rel="noreferrer"
               target="_blank"
@@ -296,12 +398,17 @@ export default function Home() {
             </a>
           </Col>
           <Col className="text-center text-3xl" span={3}>
-            <a href="mailto:adamdubicki@outlook.com" target="_self">
+            <a
+              href="mailto:adamdubicki@outlook.com"
+              target="_self"
+              aria-label="Email"
+            >
               <AiFillMail />
             </a>
           </Col>
           <Col className="text-center text-3xl" span={3}>
             <a
+              aria-label="Instagram"
               href="https://www.instagram.com/a.j.dubicki/"
               rel="noreferrer"
               target="_self"
